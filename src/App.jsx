@@ -1,6 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+import { LoginPage } from './pages/LoginPage'
+import { RegisterPage } from './pages/RegisterPage'
+import { MultipleCustomHooks } from './pages/MultipleCustomHooks'
+import React from 'react'
 
+export const App = () => {
+  return (
+    <>
+      <LoginPage />
+      <RegisterPage />
+    </>
+  )
+}
 
 
 export default App
