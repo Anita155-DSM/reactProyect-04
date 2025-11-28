@@ -1,16 +1,65 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ReactProyect-04
 
-Currently, two official plugins are available:
+## Descripción
+Proyecto de práctica para modularización, rutas protegidas, hooks personalizados y estilos con Bootstrap en React + Vite. Incluye autenticación básica, navegación entre páginas y consumo de la API de personajes de Los Simpsons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades principales
+- Páginas de Login, Registro y Home protegidas por rutas públicas/privadas.
+- Autenticación usando localStorage.
+- Custom hooks: `useForm`, `useCounter`, `useFetch`.
+- Componentes reutilizables: Navbar, Loading, CharacterInfo.
+- Estilos con Bootstrap.
+- Navegación y protección de rutas con `react-router-dom`.
 
-## React Compiler
+## Instalación
+1. Clona el repositorio:
+	 ```bash
+	 git clone https://github.com/Anita155-DSM/reactProyect-04.git
+	 cd reactProyect-04
+	 ```
+2. Instala dependencias:
+	 ```bash
+	 npm install
+	 ```
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Uso
+1. Inicia el servidor de desarrollo:
+	 ```bash
+	 npm run dev
+	 ```
+2. Accede a la app en tu navegador (generalmente en `http://localhost:5173`).
+3. Regístrate, inicia sesión y navega entre las páginas.
 
-## Expanding the ESLint configuration
+## Estructura principal
+```
+src/
+	components/
+		Navbar.jsx
+		Loading.jsx
+		CharacterInfo.jsx
+	hooks/
+		useCounter.js
+		useFetch.js
+		useForm.js
+	pages/
+		HomePage.jsx
+		LoginPage.jsx
+		RegisterPage.jsx
+	router/
+		AppRouter.jsx
+		PrivateRoutes.jsx
+		PublicRoutes.jsx
+	App.jsx
+	main.jsx
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## API utilizada
+- [API Simpsons](https://apisimpsons.fly.dev/)
+
+## Autor
+- Anita155-DSM
+
+## Notas
+- Solo se usan librerías solicitadas (React, react-router-dom, Bootstrap).
+- El proyecto está modularizado y sigue buenas prácticas de React.
